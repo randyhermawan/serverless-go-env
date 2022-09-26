@@ -36,6 +36,18 @@ To make downloading modules from private repository possible, the following must
 git config --global url."https://{GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com".insteadOf "https://github.com"
 ```
 
+## Example usage on GitHub Action
+
+```
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: randyhermawan/serverless-go-env:latest
+      env:
+        GOPRIVATE: github.com/something
+```
+
 ---
 
 **2022 - 2022 Randy Hermawan, GK**
